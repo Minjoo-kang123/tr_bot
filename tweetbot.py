@@ -235,7 +235,7 @@ def reply_to_tweets():
                         cell4 = worksheet.find(mention.user.screen_name)
                         worksheet0.update_cell(cell4.row, 9, item_list)
                         print("%s행 %s열에서 찾았습니다." % (cell4.row, 9))
-                        new_status = api.update_status("@"+ mention.user.screen_name + " 획득한 아이템: " + randitem + "입니다. 정산 요청 @Summer_occult \n [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]", mention.id)
+                        new_status = api.update_status("@"+ mention.user.screen_name + " 획득한 아이템: " + randitem + "입니다. 정산 요청 @- \n [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]", mention.id)
                     elif '보급 상자' in item:
                         cell1 = worksheet1.find('보급 상자')
                         print("%s행 %s열에서 찾았습니다." % (cell1.row, cell1.col))
@@ -248,7 +248,7 @@ def reply_to_tweets():
                         cell4 = worksheet.find(mention.user.screen_name)
                         worksheet0.update_cell(cell4.row, 9, item_list)
                         print("%s행 %s열에서 찾았습니다." % (cell4.row, 9))
-                        new_status = api.update_status("@"+ mention.user.screen_name + " 획득한 아이템: " + randitem + "입니다. 정산 요청 @Summer_occult \n [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]", mention.id)
+                        new_status = api.update_status("@"+ mention.user.screen_name + " 획득한 아이템: " + randitem + "입니다. 정산 요청 @- \n [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]", mention.id)
                     else:
                         new_status = api.update_status("@"+ mention.user.screen_name + " [" + obj +"이(는) 소지하고 있는 아이템이 아닙니다. 다시 한번 확인 후 사용해주시길 바랍니다."+"\n [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]", mention.id)
 
@@ -304,7 +304,7 @@ def reply_to_tweets():
             name = user.name
 
             cok = str(worksheet0.cell(random.randint(1, 10), 3).value)   #늘어난 만큼 15부분 수정 (열 숫자보고 그대로!)
-            new_status = api.update_status("@"+ mention.user.screen_name + " 획득한 아이템: " + cok + "입니다. 정산 요청 @Summer_occult \n [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]", mention.id)
+            new_status = api.update_status("@"+ mention.user.screen_name + " 획득한 아이템: " + cok + "입니다. 정산 요청 - \n [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]", mention.id)
         				#아이템 구매
 
 
@@ -314,7 +314,7 @@ def reply_to_tweets():
             name = user.name
 
             cok = str(worksheet0.cell(random.randint(1, 2), 3).value)   #늘어난 만큼 15부분 수정 (열 숫자보고 그대로!)
-            new_status = api.update_status("@"+ mention.user.screen_name + " 획득한 아이템: " + cok + "입니다. 정산 요청 @Summer_occult \n [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]", mention.id)
+            new_status = api.update_status("@"+ mention.user.screen_name + " 획득한 아이템: " + cok + "입니다. 정산 요청 -  \n [" + time.strftime("%Y-%m-%d %H:%M:%S") + "]", mention.id)
         				#아이템 구매
 
 while True:
